@@ -5,6 +5,7 @@ services:
     env: docker
     plan: free
     autoDeploy: true
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
@@ -15,9 +16,10 @@ services:
       - key: N8N_PORT
         value: 5678
       - key: N8N_HOST
-        value: n8n-yourname.onrender.com
+        value: alcamel-n8n-sochl-pow.onrender.com
       - key: WEBHOOK_TUNNEL_URL
         value: https://alcamel-n8n-sochl-pow.onrender.com
       - key: GENERIC_TIMEZONE
         value: "Asia/Riyadh"
-    dockerfilePath: ./Dockerfile
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "true"
